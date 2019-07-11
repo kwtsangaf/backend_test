@@ -5,8 +5,9 @@ import {ConfigModule} from './config/config.module';
 import {WeatherModule} from './weather/weather.module';
 
 @Module({
-  imports: [ConfigModule, WeatherModule],
-  controllers: [AppController],
-  providers: [AppService],
+    imports: [ConfigModule, WeatherModule],
+    controllers: [AppController],
+    providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+}

@@ -8,6 +8,6 @@ export class WeatherController {
 
     @Get()
     getWeather() {
-        return this.weatherService.getWeather();
+        return this.weatherService.getWeatherFromOpenApi();
     }
 }
