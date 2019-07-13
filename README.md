@@ -27,6 +27,10 @@ This project uses nestJS as the nodeJS framework. [More](./doc/framework.md)
 #### Request
 GET http://localhost:3000/weather
 
+Bearer Token
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SneQiuAGUW9aTpxlNNbMkEoYNj7v4-Sw_5jl13-hosk
+
 #### Sample Response
 ```
 {
