@@ -4,6 +4,8 @@ services:
     container_name: app
     restart: always
     build: .
+    environment:
+      - NODE_ENV=docker
     ports:
       - "3000:3000"
     links:

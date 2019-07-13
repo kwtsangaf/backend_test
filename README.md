@@ -6,9 +6,8 @@ Build an API to get the weather information of HK:GET / weather
 
 ### Build and Run with Docker
 ```
-docker build . -t backend-test
-
-docker run -it -p 3000:3000 backend-test
+docker-compose build
+docker-compose up
 ```
 
 this project listens on port 3000 by default
