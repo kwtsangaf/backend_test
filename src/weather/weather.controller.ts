@@ -8,6 +8,16 @@ export class WeatherController {
 
     @Get()
     getWeather() {
+        return this.weatherService.getWeather();
+    }
+
+    @Get('db')
+    getWeatherFromDb() {
+        return this.weatherService.findWeatherFromDb();
+    }
+
+    @Get('remote')
+    getWeatherFromRemote() {
         return this.weatherService.getWeatherFromOpenApi();
     }
 }
