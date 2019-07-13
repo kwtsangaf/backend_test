@@ -4,9 +4,12 @@ import {WeatherController} from './weather.controller';
 import {ConfigModule} from '../config/config.module';
 import {MongooseModule} from '@nestjs/mongoose';
 import {WeatherSchema} from '../schema/weather.schema';
+import {AuthModule} from '../auth/auth.module';
 
 @Module({
-    imports: [HttpModule, ConfigModule, MongooseModule.forFeature([{name: 'Weather', schema: WeatherSchema}])],
+    imports: [HttpModule, ConfigModule,
+        MongooseModule.forFeature([{name: 'Weather', schema: WeatherSchema}]),
+        AuthModule],
     controllers: [WeatherController],
     providers: [WeatherService, Logger],
 })

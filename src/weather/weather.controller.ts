@@ -1,5 +1,6 @@
-import {Controller, Get} from '@nestjs/common';
+import {Controller, Get, UseGuards} from '@nestjs/common';
 import {WeatherService} from './weather.service';
+import {AuthGuard} from '@nestjs/passport';
 
 @Controller('weather')
 export class WeatherController {
@@ -7,6 +8,7 @@ export class WeatherController {
     }
 
     @Get()
+    @UseGuards(AuthGuard())
     getWeather() {
         return this.weatherService.getWeather();
     }
