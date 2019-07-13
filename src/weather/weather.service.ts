@@ -24,7 +24,12 @@ export class WeatherService {
 
     async getWeatherFromOpenApi() {
         const response = await this.httpService
-            .get(`https://api.openweathermap.org/data/2.5/weather?id=${this.configService.get('CITY_ID')}&appid=${this.configService.get('APP_ID')}`)
+            .get(this.configService.get('WEATHER_API_ENDPOINT'), {
+                params: {
+                    id: this.configService.get('CITY_ID'),
+                    appid: this.configService.get('APP_ID'),
+                },
+            })
             .toPromise();
         this.createWeatherToDb(response.data);
         return response.data;
