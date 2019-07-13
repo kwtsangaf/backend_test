@@ -95,6 +95,14 @@ When an exception is unrecognized (is neither HttpException nor a class that inh
 
 ```
 
+When an exception is an authentication error
+```
+{
+    "statusCode": 401,
+    "error": "Unauthorized"
+}
+```
+
 ### Style
 #### Commit
 Use [the AngularJS commit conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
